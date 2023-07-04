@@ -1,4 +1,4 @@
-package com.sanchelo.weatherapp
+package com.sanchelo.weatherapp.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,34 +10,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.sanchelo.weatherapp.ui.theme.WeatherAppTheme
+import com.sanchelo.weatherapp.presentation.theme.WeatherAppTheme
+import com.sanchelo.weatherapp.presentation.views.WeatherCard
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             WeatherAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                //WeatherCard()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    WeatherAppTheme {
-        Greeting("Android")
     }
 }
