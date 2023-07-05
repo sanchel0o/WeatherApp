@@ -1,3 +1,6 @@
+@file:Suppress("UnstableApiUsage")
+@Suppress("DSL_SCOPE_VIOLATION")
+
 pluginManagement {
     repositories {
         google()
@@ -11,6 +14,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+
 }
-rootProject.name = "WeatherApp"
-include ':app'
+rootProject.name = "GrainRipper"
+include("app")
